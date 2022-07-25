@@ -1,0 +1,123 @@
+__default__:
+    system: 'slurm' #check if system is defined below
+    account: eurac #required
+    time: 360000 # minutes
+    mem: 20 # GB
+    threads: 4
+    partition: basic
+    queue: basic # required
+    nodes: 1
+    command_options:
+        slurm:
+            command: "sbatch --parsable --qos=unlim"
+            key_mapping:
+            name: "--job-name={}"
+            threads: "-n {}"
+            mem: "--mem={}g"
+            account: "--account={}"
+            queue: "--partition={}"
+            time: "--time={}"
+            nodes: "-N {}"      # ntasks: 24
+
+fastp_trim: 
+    queue: basic
+    mem: 20
+    time: 36000
+
+fastp_merge:
+    queue: basic
+    mem: 20
+    time: 36000
+
+rmdup:
+    queue: basic
+    mem: 20
+    time: 36000
+
+general_spades:
+    queue: himem
+    time: 360000
+
+megahit:
+    queue: basic
+    time: 360000
+
+filter_assembly:
+    queue: basic
+    threads: 8
+    mem: 50
+    time: 360000
+
+MetaBAT:
+    queue: basic
+    threads: 4
+    mem: 20
+    time: 36000
+
+MaxBin:
+    queue: basic
+    threads: 8
+    mem: 20
+    time: 36000
+
+CONCOCT:
+    queue: basic
+    threads: 4
+    mem: 20
+    time: 36000
+
+DAS_Tool:
+    queue: basic
+    threads: 4
+    mem: 40
+    time: 36000
+
+checkM:
+    queue: basic
+    threads: 10
+    mem: 50
+    time: 36000
+
+GTDB:
+    queue: basic
+    threads: 16
+    mem: 100
+    time: 360000
+
+human_rCRS:
+    queue: basic
+    threads: 8
+    mem: 40
+    time: 36000
+
+human_hg19:
+    queue: basic
+    threads: 8
+    mem: 40
+    time: 36000
+
+human_QualiMap:
+    queue: basic
+    threads: 2
+    mem: 20
+    time: 36000
+
+human_mapDamage:
+    queue: basic
+    threads: 4
+    mem: 40
+    time: 36000
+
+sex_assignment:
+    queue: basic
+    threads: 4
+    mem: 10
+    time: 36000
+
+schmutzi:
+    queue: basic
+    threads: 2
+    mem: 20
+    time: 36000
+
+

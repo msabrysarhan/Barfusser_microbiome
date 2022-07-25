@@ -1,0 +1,16 @@
+INPUT_DIR: data #You can change the path to your data directory
+
+hg19: "/scratch/eurac/Common/ReferenceGenomes/hg19/hg19_complete/hg19_complete.fasta"
+rCRS: "/scratch/eurac/Common/ReferenceGenomes/Mito_rCRS/rCRS.fasta"
+diamond_db: "/localmirror/monthly/diamond/nr.dmnd"
+megan_prot: "/apps/megan/mapping_files/prot_acc2tax-Jul2019X1.abin"
+metaphlan_db: "/apps/metaphlan/bowtie2db"
+kraken_db: "/scratch/mirror/kraken2/minikraken"
+
+
+
+
+
+
+
+

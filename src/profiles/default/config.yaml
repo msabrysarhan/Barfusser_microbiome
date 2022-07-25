@@ -1,0 +1,10 @@
+# non-slurm profile defaults
+restart-times: 1
+local-cores: 8
+latency-wait: 60
+use-conda: True
+jobs: 1
+keep-going: True
+rerun-incomplete: True
+shadow-prefix: /scratch/eurac/sarhan
+printshellcmds: True

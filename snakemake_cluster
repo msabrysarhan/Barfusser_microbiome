@@ -1,0 +1,37 @@
+#!/bin/bash
+
+function display_help() {
+    echo " "
+    echo "snakemake_cluster is a shell script that runs the snakemake workflow"
+    echo "according to the required outputs"
+    echo "By default, it runs the whole workflow, i.e. metagenomic assembly,"
+    echo "human DNA analysis, and taxonomic classifications"
+    echo "Usage: ./snakemake_cluster -w workflow"
+	echo " "
+    echo "   -w, --workflow           Specify the workflow you'd like to run;"
+    echo "   -h, --help               Show this message."
+    echo " "
+    echo " "
+    exit 1
+}
+module load miniconda
+module unload python3
+module load python3/3.9.0
+#module load snakemake
+
+#eval "$(conda shell.bash hook)"
+#source /home/user/$USER/.bashrc
+#conda activate /apps/busco/5.2.2
+#eval "$(conda shell.bash hook)"
+#conda activate snakemake-6.4.1
+
+sbatch -o snakemake.log --partition=basic --mem=10GB --job-name=snakemake --cpus-per-task=1 --wrap="snakemake \
+--use-envmodules --use-conda \
+--profile src/profiles/slurm \
+-k"
+
+
+
+
+
+

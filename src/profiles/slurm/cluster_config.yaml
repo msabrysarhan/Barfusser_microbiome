@@ -1,0 +1,84 @@
+__default__:
+    account: eurac #required
+    time: 360000 # minutes
+    mem: 20000 # MB
+    cpus-per-task: 4
+    partition: basic
+    nodes: 1
+    output: "log/{wildcards.sample}/{rule}/slurm-%j.out"
+    error: "log/{wildcards.sample}/{rule}/slurm-%j.err"
+    job-name: "{wildcards.sample}.{rule}"
+
+fastp_trim: 
+    partition: basic
+    time: 360000
+
+fastp_merge:
+    partition: basic
+    time: 360000
+
+rmdup:
+    partition: basic
+    time: 360000
+
+general_spades:
+    partition: himem
+    time: 360000
+
+megahit:
+    partition: basic
+    time: 360000
+
+filter_assembly:
+    partition: basic
+    time: 360000
+
+MetaBAT:
+    partition: basic
+    time: 36000
+
+MaxBin:
+    partition: basic
+    time: 36000
+
+CONCOCT:
+    partition: basic
+    time: 36000
+
+DAS_Tool:
+    partition: basic
+    time: 36000
+
+checkM:
+    partition: basic
+    time: 36000
+
+GTDB:
+    partition: basic
+    time: 360000
+
+human_rCRS:
+    partition: basic
+    time: 36000
+
+human_hg19:
+    partition: basic
+    time: 36000
+
+human_QualiMap:
+    partition: basic
+    time: 36000
+
+human_mapDamage:
+    partition: basic
+    time: 36000
+
+sex_assignment:
+    partition: basic
+    time: 36000
+
+schmutzi:
+    partition: basic
+    time: 36000
+
+
