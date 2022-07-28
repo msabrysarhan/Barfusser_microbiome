@@ -699,7 +699,7 @@ rule metaphlan:
         heatmap = report("out/taxonomic_classifications/metaphlan/{sample}/{sample}.heatmap.pdf", category="MetaPhlAn")
     threads: lambda wildcards: threads_num[wildcards.sample]
     envmodules:
-        "metaphlan", "python2", "gcc"
+        "metaphlan", "python3/3.8.5", "gcc"
     resources:
         mem_mb= lambda wildcards, input, attempt: max(threads_num[wildcards.sample], 4) * 5000 * attempt,
         disk_mb= lambda wildcards, input, attempt: max(threads_num[wildcards.sample], 4) * 5000 * attempt
