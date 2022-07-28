@@ -524,7 +524,7 @@ rule sex_assignment:
         skglnd_sex = "out/human/{sample}/{sample}.skglnd.sex",
         mtnk_sex = "out/human/{sample}/{sample}.mtnk.sex"
     envmodules:
-        "python2", "samtools", "R/3.5.1", "gcc"
+        "python2", "samtools", "R/3.5.1", "gcc" ## Note for Myriam #"miniconda/4.8.3"
     shell:
         """
         samtools index {input.bam}
